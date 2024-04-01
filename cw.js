@@ -128,3 +128,155 @@ else{
 }
 
 console.log(result)
+
+// .................. MR WALE DELICACIES ....................
+
+// 1. Finds the largest of three number.
+// If num1 is larger, print num1 is the largest number.
+// If num2 is larger, print num1 is the largest number.
+// If num3 is larger, print num1 is the largest number.
+
+let numb1 = 30;
+let numb2 = 20;
+let numb3 = 35;
+let largest;
+
+if (
+  typeof numb1 !== "number" ||
+  typeof numb2 !== "number" ||
+  typeof numb3 !== "number"
+) {
+  largest = "Enter only number! this is age for crying out loud";
+} else if (numb1 > numb2 && numb1 > numb3) {
+  largest = `numb1 is the largest, i'm ${numb1} numb2 is ${numb2} and numb3 is ${numb3}`;
+} else if (numb2 > numb1 && numb2 > numb3) {
+  largest = `numb2 is the largest, i'm ${numb2} numb1 is ${numb1} and numb3 is ${numb3}`;
+} else if (numb3 > numb1 && numb3 > numb2) {
+  largest = `numb3 is the largest, i'm ${numb3} numb2 is ${numb2} and numb1 is ${numb1}`;
+} else if (numb2 === numb1 || numb2 === numb3 || numb1 === numb3) {
+  if (numb2 > numb3 || numb1 > numb3) {
+    largest = `we are the largest numb3 is just ${numb3} even though numb2 and numb1 are the same, numb2 is ${numb2} and numb1 is ${numb1}`;
+  } else if (numb1 > numb2 || numb3 > numb2) {
+    largest = `we are the largest numb2 is just ${numb2} even though numb1 and numb3 are the same, numb1 is ${numb1} and numb3 is ${numb3}`;
+  } else if (numb3 > numb1 || numb2 > numb1) {
+    largest = `we are the largest numb1 is just ${numb1} even though numb3 and numb2 are the same, numb3 is ${numb3} and numb2 is ${numb2}`;
+  } else {
+    largest = `Oooops, we are the equal`;
+  }
+} else {
+  largest = `invalid input! get lost!!`;
+}
+
+console.log(largest);
+
+
+// 2.  Write an if-else block that checks if a variable isWeekend is true. 
+// If it is, check if a variable isHoliday is true and print "Weekend holiday" 
+//  or "Regular weekend" if it isn't. If isWeekend isn't true, 
+// check if isHoliday is true and print "Weekday holiday" if it is, or "Regular weekday" if it isn't.
+
+
+let isWeekend = true;
+let isHoliday = false;
+let isWeekday = false;
+let print4;
+
+if(isWeekend){
+  if(isHoliday){
+    print4 = `Weekend Holiday`;
+  }
+  else{
+    print4 = `Regular Weekend`;
+  }
+}
+else if(isHoliday){
+  print4 = `Weekday Holiday`;
+}
+else {
+  print4 = `Regular W eekday`;
+}
+
+console.log(print4)
+
+// 3. In an organization , bonus to be shared for staff who have spent at 
+// least 10 years with the company to get 5% on their salary. Write an if-else 
+// to calculate if a staff is or isnt entiled to the bonus and how much.
+
+
+let yearsSpent = 22;
+let salary = 400;
+let entitlement;
+
+if (yearsSpent >= 10) {
+  entitlement = `Congratulation, you've qualified for the bonus of $${salary * (5 / 100)} on your salary, altogether $${salary + (salary * (5 /100))}, because you have been working here with us for ${yearsSpent} years`;
+} else if (yearsSpent < 10 && yearsSpent >= 0 && typeof yearsSpent === "number") {
+  entitlement = `Oooops! you have been working here for just ${yearsSpent} years, you need ${
+    10 - yearsSpent
+  } more years to be qualified for a bonus`;
+} else {
+  entitlement = `invalid input..., get out!`;
+}
+
+console.log(entitlement);
+
+
+// 4. Write a statement that allows a shop to give a discount of 10% if the 
+// cost of purchased quantity is more than 1000. Output the total cost for the user.
+
+let purchased = 5400;
+let totalCost;
+
+if (purchased > 1000 && typeof purchased === "number") {
+  totalCost = `What you purchased initail is $${purchased} but you will be getting a discount of 10%, so your total cost is $${
+    purchased - purchased * (10 / 100)
+  }`;
+} else if (
+  purchased <= 1000 &&
+  purchased > 0 &&
+  typeof purchased === "number"
+) {
+  totalCost = `What you purchased initail is $${purchased}. scale up your purchase with $${1001 - purchased} and above so you can get a 10% discount`;
+}
+else{
+  totalCost = `invalid input... get lost!`;
+}
+
+console.log(totalCost);
+
+
+// 5. Finds the type of the triangle for given side values.
+// Print “Equilateral triangle.” if values for all side1, side2 and side3 are equal.
+// Print “Isosceles triangle.” if values for side1 is equal to side2 or side2 is equal to side3
+// Else “Scalene triangle.” since values of all sides are unequal.
+
+let side1 = 50;
+let side2 = 50;
+let side3 = 50;
+let triangle;
+if(side1 === side2 && side2 === side3 && side1 === side3){
+  triangle = `Equilateral Triangle`;
+}
+else if (side1 === side2 || side2 === side3 || side3 === side1){
+  triangle = `Isosceles Triangle`;
+}
+else {
+  triangle = `Scalene Triangle`;
+}
+
+console.log(triangle);
+
+
+// 6. Write JavaScript code to take a number and check whether it is a Buzz number or not.
+//  A number is a buzz number when it ends with 7 or is divisible by 7
+
+let buzzNumber = 77;
+let checkBuzz;
+
+if(buzzNumber % 10 === 7 || buzzNumber % 7 === 0){
+  checkBuzz = `it's a Buzz Number, because the input is ${buzzNumber}`
+}
+else{
+  checkBuzz = `it's not a buzz Number, because the input is ${buzzNumber}`
+}
+
+console.log(checkBuzz);
